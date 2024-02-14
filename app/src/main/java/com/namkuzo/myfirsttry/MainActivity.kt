@@ -3,6 +3,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -33,13 +34,18 @@ class MainActivity : ComponentActivity() {
                  .background(Color.Green)
                  .fillMaxHeight(0.5f)
                  .fillMaxWidth()
-                 .padding(top = 50.dp)
+                 .border(5.dp, Color.Magenta)
+                 .padding(5.dp)
+                 .border(5.dp, Color.Blue)
+                 .padding(5.dp)
+                 .border(10.dp, Color.Red)
+                 .padding(18.dp)
+
              //    .width(600.dp)
              //    .requiredWidth(600.dp)
          ) {
 
-             Text("Hello", modifier = Modifier
-                 .offset(0.dp,20.dp))
+             Text("Hello")
              Spacer(modifier = Modifier.height(50.dp))
              Text("world")
          }
