@@ -5,8 +5,15 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.requiredHeight
+import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -21,19 +28,21 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Column(
-                modifier = Modifier
-                    .width(300.dp)
-                    .height(300.dp)
-                    .background(Color.Green),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.SpaceAround
-            )
+         Column (
+             modifier = Modifier
+                 .background(Color.Green)
+                 .fillMaxHeight(0.5f)
+                 .fillMaxWidth()
+                 .padding(top = 50.dp)
+             //    .width(600.dp)
+             //    .requiredWidth(600.dp)
+         ) {
 
-            {
-                Text(text = "Hello")
-                Text(text = "World")
-            }
+             Text("Hello", modifier = Modifier
+                 .offset(0.dp,20.dp))
+             Spacer(modifier = Modifier.height(50.dp))
+             Text("world")
+         }
 
         }
     }
