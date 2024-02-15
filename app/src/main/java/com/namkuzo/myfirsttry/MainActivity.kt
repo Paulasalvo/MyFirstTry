@@ -24,50 +24,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.namkuzo.myfirsttry.ui.component.Modifier
 
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-         Column (
-             modifier = Modifier
-                 .background(Color.Green)
-                 .fillMaxHeight(0.5f)
-                 .fillMaxWidth()
-                 .border(5.dp, Color.Magenta)
-                 .padding(5.dp)
-                 .border(5.dp, Color.Blue)
-                 .padding(5.dp)
-                 .border(10.dp, Color.Red)
-                 .padding(18.dp)
-
-             //    .width(600.dp)
-             //    .requiredWidth(600.dp)
-         ) {
-
-             Text("Hello")
-             Spacer(modifier = Modifier.height(50.dp))
-             Text("world")
-         }
 
         }
     }
 }
 
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-        Greeting("Android")
-
-}
 
