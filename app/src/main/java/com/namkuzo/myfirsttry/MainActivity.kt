@@ -46,9 +46,7 @@ class MainActivity : ComponentActivity() {
              //    .requiredWidth(600.dp)
          ) {
 
-             Text("Hello", modifier = Modifier.clickable{
-
-             } )
+             Text("Hello")
              Spacer(modifier = Modifier.height(50.dp))
              Text("world")
          }
